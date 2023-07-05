@@ -41,3 +41,35 @@ nav.main div.search.box input {
 input::placeholder {
   color: #fff;
 }
+
+.main.tab.drop {
+  /* position: absolute; */
+    top: 67px;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    display: none;
+    color: black;
+    /* border: 2px solid #1d9042; */
+}
+
+.main.tab.drop li {
+  position: relative;
+  background-color: #e0efdc;
+}
+.main.tab li:hover .main.tab.drop {
+  display: block;
+}
+.main.tab.drop li:hover {
+  border-radius: 0;
+  background-color: #ff9d78;
+
+}
+.main.tab.drop li p{
+  width: 168px;
+  padding-top: 4px;
+  height: 70px;
+  line-height: 70px;
+  display: inline-block
+  
+}

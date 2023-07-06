@@ -6,11 +6,15 @@ nav.main {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
+  width: 1200px;
 }
 nav.main ul {
   list-style: none;
   display: flex;
   justify-content: center;
+  width: 1200px;
+  margin: 0 auto;
 }
 nav.main li {
   width: 168px;
@@ -44,13 +48,13 @@ input::placeholder {
 
 .main.tab.drop {
   /* position: absolute; */
-    top: 67px;
-    left: 0;
-    z-index: 1;
-    width: 100%;
-    display: none;
-    color: black;
-    /* border: 2px solid #1d9042; */
+  top: 67px;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  display: none;
+  color: black;
+  /* border: 2px solid #1d9042; */
 }
 
 .main.tab.drop li {
@@ -63,13 +67,12 @@ input::placeholder {
 .main.tab.drop li:hover {
   border-radius: 0;
   background-color: #ff9d78;
-
 }
-.main.tab.drop li p{
+.main.tab.drop li p {
   width: 168px;
   padding-top: 4px;
   height: 70px;
   line-height: 70px;
-  display: inline-block
-  
+  display: inline-block;
+  font-size: 30px;
 }

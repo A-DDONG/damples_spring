@@ -18,8 +18,8 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.damples.damdam" />
-	
+	<context:component-scan base-package="com.damples.damdam.controller" />
+	<context:component-scan base-package="com.damples.damdam.service.impl" />
 	
 	
 </beans:beans>

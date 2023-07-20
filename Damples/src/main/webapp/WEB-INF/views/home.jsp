@@ -10,11 +10,17 @@
 <title>담양 여행의 시작 DAMPLES</title>
 <link rel="stylesheet" href="${rootPath}/static/css/main.css?${version}">
 <link rel="stylesheet" href="${rootPath}/static/css/nav.css?${version}">
-<link rel="stylesheet"
-	href="${rootPath}/static/css/mapnav.css?${version}">
+<link rel="stylesheet" href="${rootPath}/static/css/mapnav.css?${version}">
 <link rel="stylesheet" href="${rootPath}/static/css/map.css?${version}">
-<link rel="stylesheet"
-	href="${rootPath}/static/css/event.css?${version}">
+<link rel="stylesheet" href="${rootPath}/static/css/event.css?${version}">
+<link rel="stylesheet" href="${rootPath}/static/css/main_tourlist.css?${version}">
+<script>
+	// JS 파일에서 rootPath 정보를 
+	// 사용할수 있도록 전역(global) 변수로 선언
+	var rootPath = "${rootPath}"
+</script>
+<script src="${rootPath}/static/js/main_nav.js"></script>
+
 </head>
 
 <body>
@@ -27,16 +33,8 @@
 		<%@ include file="/WEB-INF/views/tour/mapnav.jsp"%>
 		<%@ include file="/WEB-INF/views/tour/map.jsp"%>
 		<%@ include file="/WEB-INF/views/tour/event.jsp"%>
+		<%@ include file="/WEB-INF/views/tour/main_tourlist.jsp"%>
 
-		<!-- 메인 화면에 모든 관광지 정보 출력 -->
-		<h2>All Tours</h2>
-		<c:forEach items="${TOUR_LIST}" var="tour">
-			<!-- 선택된 관광지 코드를 클릭하면 해당 관광지의 detail 페이지로 이동 -->
-			<a href="<c:url value='/detail'/>?tourCode=${tour.tour_code}">${tour.tour_code}</a>
-			<p>${tour.tour_name}</p>
-			<p>${tour.tour_info}</p>
-			<!-- 추가적인 정보를 보여주는 로직을 작성 -->
-		</c:forEach>
 
 
 	</div>

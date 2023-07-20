@@ -7,10 +7,10 @@
 		<li class="info">소개
 			<ul class="main tab drop">
 				<li>
-					<p>담양군 소개</p>
+					<p class="info">담양군 소개</p>
 				</li>
 				<li>
-					<p>주요 관광지</p>
+					<p class="tourist">주요 관광지</p>
 				</li>
 			</ul>
 		</li>
@@ -18,10 +18,10 @@
 		<li class="news">소식
 			<ul class="main tab drop">
 				<li>
-					<p>담양군 소식</p>
+					<p class="news">담양군 소식</p>
 				</li>
 				<li>
-					<p>행사일정</p>
+					<p class="calendar">행사일정</p>
 				</li>
 			</ul>
 		</li>

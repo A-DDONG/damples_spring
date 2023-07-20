@@ -11,7 +11,7 @@ import lombok.ToString;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class imgDto {
+public class ImgDto {
 	
 	private long image_code;
 	private String image_name;

@@ -7,9 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/upload" method="post" enctype="multipart/form-data">
-    <input type="file" name="imageFile" />
-    <button type="submit">Upload Image</button>
+<form method="POST" encType="multipart/form-data">
+    <input type="file" name="image_name" accept="image/*" />
 </form>
+
 </body>
 </html>

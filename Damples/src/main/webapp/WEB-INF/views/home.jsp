@@ -10,17 +10,20 @@
 <title>담양 여행의 시작 DAMPLES</title>
 <link rel="stylesheet" href="${rootPath}/static/css/main.css?${version}">
 <link rel="stylesheet" href="${rootPath}/static/css/nav.css?${version}">
-<link rel="stylesheet" href="${rootPath}/static/css/mapnav.css?${version}">
+<link rel="stylesheet"
+	href="${rootPath}/static/css/mapnav.css?${version}">
 <link rel="stylesheet" href="${rootPath}/static/css/map.css?${version}">
-<link rel="stylesheet" href="${rootPath}/static/css/event.css?${version}">
-<link rel="stylesheet" href="${rootPath}/static/css/main_tourlist.css?${version}">
+<link rel="stylesheet"
+	href="${rootPath}/static/css/event.css?${version}">
+<link rel="stylesheet"
+	href="${rootPath}/static/css/main_tourlist.css?${version}">
 <script>
 	// JS 파일에서 rootPath 정보를 
 	// 사용할수 있도록 전역(global) 변수로 선언
 	var rootPath = "${rootPath}"
 </script>
 <script src="${rootPath}/static/js/main_nav.js"></script>
-
+<script src="${rootPath}/static/js/main_map.js"></script>
 </head>
 
 <body>
@@ -38,6 +41,7 @@
 
 
 	</div>
+
 </body>
 
 </html>

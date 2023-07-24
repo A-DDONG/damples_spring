@@ -1,4 +1,7 @@
 @charset "UTF-8";
+div.tour-category {
+    width: 100%;
+}
 div.tourlist {
     font-family: "GangwonEduPowerExtraBoldA";
     font-size: 30px;
@@ -22,7 +25,7 @@ div.tourlist p.check {
     color: #0c5c00;
 }
 
-div.tourlist p.sub_name {
+div.tourlist.sub p.sub_name {
     font-family: "GangwonEduPowerExtraBoldA";
     color:#888;
 }

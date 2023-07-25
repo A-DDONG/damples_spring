@@ -26,6 +26,10 @@
     </div>
 </div>
 <div class="tour-category" id="meokbang" data-category="meokbang">
+    <div class="tourlist hp">
+        <h1>MeokBang</h1>
+        <div class="line"></div>
+    </div>
     <div class="tourlist sub">
         <p class="check">✓</p>
         <p class="sub_name">맛집</p>
@@ -36,6 +40,10 @@
     </div>
 </div>
 <div class="tour-category" id="acc" data-category="acc">
+    <div class="tourlist hp">
+        <h1>숙박</h1>
+        <div class="line"></div>
+    </div>
     <div class="tourlist sub">
         <p class="check">✓</p>
         <p class="sub_name">캠핑</p>

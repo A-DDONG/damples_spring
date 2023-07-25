@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 .map.nav {
   display: inline-flex;
 }
@@ -27,4 +26,8 @@
   background-color: #0c5c00;
   color: white;
   cursor: pointer;
+}
+.map.nav ul li.active {
+  background-color: #0c5c00;
+  color: white;
 }

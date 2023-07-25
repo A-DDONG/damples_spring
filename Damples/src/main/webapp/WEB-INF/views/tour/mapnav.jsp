@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <nav class="map nav">
 	<ul>
-		<li data-map="hotplace">핫플</li>
+		<li class="active" data-map="hotplace">핫플</li>
 		<li data-map="meokbang">먹방</li>
 		<li data-map="acc">숙박</li>
 	</ul>

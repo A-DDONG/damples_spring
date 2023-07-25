@@ -1,6 +1,10 @@
 @charset "UTF-8";
 div.tour-category {
     width: 100%;
+    display: none;
+}
+div.tour-category.active {
+    display: block;
 }
 div.tourlist {
     font-family: "GangwonEduPowerExtraBoldA";

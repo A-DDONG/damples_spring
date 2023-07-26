@@ -11,7 +11,6 @@ public interface TourDao {
 	@Select(" SELECT * FROM tbl_tour ")
 	public List<TourDto> selectAll();
 	
-	@Select(" SELECT * FROM tbl_tour WHERE tour_code = #{tourCode} ")
 	public TourDto selectById(String tourCode);
 
 }

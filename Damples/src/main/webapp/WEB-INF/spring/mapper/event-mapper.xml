@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.damples.damdam.dao.EventDao">
+    <resultMap id="eventResultMap" type="com.damples.damdam.models.EventDto">
+        <id column="id" property="id" />
+        <result column="date" property="date" />
+        <result column="event_info" property="eventInfo" />
+    </resultMap>
+
+    <select id="getAllEvents" resultMap="eventResultMap">
+        SELECT id, date, event_info FROM events
+    </select>
+</mapper>

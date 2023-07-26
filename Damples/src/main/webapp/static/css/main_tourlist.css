@@ -33,3 +33,35 @@ div.tourlist.sub p.sub_name {
     font-family: "GangwonEduPowerExtraBoldA";
     color:#888;
 }
+
+.tourlist {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tour-box {
+    width: 33.33%; /* 화면에 3개의 박스가 보이도록 폭을 33.33%로 설정 */
+    padding: 10px;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+.tour-box li {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.tour-box img {
+    width: 100%; /* 이미지를 가로 폭의 100%로 조정 */
+    height: auto; /* 세로 크기를 자동으로 조정하여 비율 유지 */
+}
+
+.tour-box .title {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.tour-box .sub {
+    margin-top: 5px;
+}

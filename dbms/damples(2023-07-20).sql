@@ -31,3 +31,13 @@ ALTER TABLE tbl_tour
 ADD CONSTRAINT f_imgcode
 FOREIGN KEY (tour_imgcode)
 references tbl_image (image_code);
+
+CREATE TABLE events (
+	id INT PRIMARY KEY auto_increment,
+    date DATE NOT NULL,
+    event_info VARCHAR(255) NOT NULL
+);
+INSERT INTO events (date, event_info) VALUES ('2023-07-27', 'Event 1');
+INSERT INTO events (date, event_info) VALUES ('2023-07-28', 'Event 2');
+INSERT INTO events (date, event_info) VALUES ('2023-07-29', 'Event 3');
+SELECT * FROM events;

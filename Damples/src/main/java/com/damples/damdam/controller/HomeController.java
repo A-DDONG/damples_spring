@@ -26,21 +26,10 @@ public class HomeController {
 	}
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(String tourCode, Model model) {
-		
-
-	    List<TourDto> tourList = tourDao.selectAll();
-	    model.addAttribute("TOUR_LIST", tourList);
-	    
-	    // A0001 코드에 해당하는 데이터만 변수에 담기
-	    List<TourDto> selectedTours = new ArrayList<>();
-	    for (TourDto tourDto : tourList) {
-	        if (tourDto.getTour_code().equals(tourCode)) {
-	            selectedTours.add(tourDto);
-	        }
-	    }
-	    model.addAttribute("SELECTED_TOURS", selectedTours);
-	    return "home";
+    public String home(Model model) {
+        List<TourDto> tourList = tourDao.selectAll();
+        model.addAttribute("TOUR_LIST", tourList);
+        return "home";
 	}
     @RequestMapping(value = "/detail", method = RequestMethod.GET)
     public String detail(String tourCode, Model model) {

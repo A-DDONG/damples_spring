@@ -1,0 +1,67 @@
+@charset "UTF-8";
+div.tour-category {
+    width: 100%;
+    display: none;
+}
+div.tour-category.active {
+    display: block;
+}
+div.tourlist {
+    font-family: "GangwonEduPowerExtraBoldA";
+    font-size: 30px;
+    color: #0c5c00;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+div.line {
+    width: 100%;
+    height: 10px;
+    background-color: #0c5c00;
+}
+
+div.tourlist p.check, div.tourlist p.sub_name {
+    display: inline;
+    font-size: 40px;
+}
+div.tourlist p.check {
+    font-weight: bold;
+    color: #0c5c00;
+}
+
+div.tourlist.sub p.sub_name {
+    font-family: "GangwonEduPowerExtraBoldA";
+    color:#888;
+}
+
+.tourlist {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tour-box {
+    width: 33.33%; /* 화면에 3개의 박스가 보이도록 폭을 33.33%로 설정 */
+    padding: 10px;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+.tour-box li {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.tour-box img {
+    width: 100%; /* 이미지를 가로 폭의 100%로 조정 */
+    height: auto; /* 세로 크기를 자동으로 조정하여 비율 유지 */
+}
+
+.tour-box .title {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.tour-box .sub {
+    margin-top: 5px;
+}

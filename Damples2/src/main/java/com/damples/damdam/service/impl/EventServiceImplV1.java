@@ -32,9 +32,4 @@ public class EventServiceImplV1 implements EventService {
 		return eventDao.getEventsBetweenDates(startDate, endDate);
 
 	}
-
-	@Override
-	public List<EventDto> getEventsBetweenDates(String startDate, String endDate) {
-		return eventDao.getEventsBetweenDates(startDate, endDate);
-	}
 }

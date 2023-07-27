@@ -6,6 +6,4 @@ import com.damples.damdam.models.EventDto;
 
 public interface EventService {
 	List<EventDto> getEventsForMonth(int year, int month);
-
-	List<EventDto> getEventsBetweenDates(String startDate, String endDate);
 }

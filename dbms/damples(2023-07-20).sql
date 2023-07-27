@@ -40,7 +40,11 @@ CREATE TABLE events (
 INSERT INTO events (date, event_info) VALUES ('2023-07-27', 'Event 1');
 INSERT INTO events (date, event_info) VALUES ('2023-07-28', 'Event 2');
 INSERT INTO events (date, event_info) VALUES ('2023-07-29', 'Event 3');
+INSERT INTO events (date, event_info) VALUES ('2023-08-02', '힘내');
+INSERT INTO events (date, event_info) VALUES ('2023-08-04', '진정해');
+INSERT INTO events (date, event_info) VALUES ('2023-08-15', '화내면안돼');
 SELECT * FROM events;
+
 
 SELECT COUNT(*) FROM tbl_books WHERE
 b_name LIKE concat('%','부자','%') OR

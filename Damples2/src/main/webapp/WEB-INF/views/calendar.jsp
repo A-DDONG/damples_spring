@@ -1,51 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:set value="${pageContext.request.contextPath}" var="rootPath" />
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Calendar</title>
-     <style>
-     /* 스타일은 간단한 예시로 작성하였습니다. */
-    #calendarContainer {
-        max-width: 800px;
-        margin: 0 auto;
-        text-align: center;
-    }
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+/* 스타일은 간단한 예시로 작성하였습니다. */
+table {
+    border-collapse: collapse;
+}
 
-    table {
-        border-collapse: collapse;
-        width: 100%;
-    }
-
-    th, td {
-        border: 1px solid black;
-        padding: 5px;
-        text-align: center;
-    }
-
-    th {
-        background-color: #f2f2f2;
-    }
-
-    /* 고정된 셀 크기를 설정합니다. */
-    td {
-        height: 60px; /* 원하는 크기로 조정하세요. */
-        width: 14.28%; /* (100 / 7)로 7일간의 일정한 크기로 설정합니다. */
-        vertical-align: top;
-    }
-
-    .date {
-        font-weight: bold;
-    }
-
-    .event {
-        color: blue;
-    }
-    </style>
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+</style>
 </head>
 <body>
-   <div id="calendarContainer">
     <h2>Calendar</h2>
     <button onclick="prevMonth()">Previous Month</button>
     <span id="currentMonthYear">${year}년 ${month}월</span>
@@ -53,48 +27,45 @@
 
     <br>
     <br>
-    
     <table>
-    	<tbody>
-    	<tr>
-    		<th>일</th>
-    		<th>월</th>
-    		<th>화</th>
-    		<th>수</th>
-    		<th>목</th>
-    		<th>금</th>
-    		<th>토</th>
-    	</tr>	
-    	</tbody>
-    
-    <tbody id="calendarBody"></tbody>
+        <tr>
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+        </tr>
+        <tbody id="calendarBody">
+        </tbody>
     </table>
-</div>
+
     <script>
-    var currentYear = ${year};
-    var currentMonth = ${month};
-    var allMonthEvents = ${allMonthEventsJson}; // JSON 문자열을 JavaScript 객체로 변환
+        var currentYear = ${year};
+        var currentMonth = ${month} ;
+        var eventsData = JSON.parse('${events}'); // JSON 문자열을 JavaScript 객체로 변환
 
         // 페이지 로딩 시 달력 표시
-        displayCalendar(currentYear, currentMonth - 1, allMonthEvents);
+        displayCalendar(currentYear, currentMonth - 1, eventsData);
 
         console.log("Current Year: ", currentYear);
         console.log("Current Month: ", currentMonth);
-        console.log("All Month Events: ", allMonthEvents);
+        console.log("Events Data: ", eventsData);
 
         function escapeSpecialCharacters(text) {
             return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(
-                />/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g,
-                "&#039;");
+                    />/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g,
+                    "&#039;");
         }
-
+        
         function formatDate(year, month, date) {
             var formattedMonth = (month + 1).toString().padStart(2, '0');
             var formattedDate = date.toString().padStart(2, '0');
             return year + '-' + formattedMonth + '-' + formattedDate;
         }
 
-        function displayCalendar(year, month, allMonthEvents) {
+        function displayCalendar(year, month, events) {
             var calendarBody = document.getElementById("calendarBody");
             var currentMonthYear = document.getElementById("currentMonthYear");
 
@@ -132,11 +103,12 @@
                         var cell = document.createElement("td");
                         cell.textContent = date;
                         // 날짜를 "yyyy-MM-dd" 형식으로 변환하여 저장합니다.
-                        cell.setAttribute("data-date", formatDate(year, month, date));
+                        cell.setAttribute("data-date", year + '-' + (month + 1)
+                                + '-' + date);
 
                         // 해당 날짜에 이벤트 정보가 있는 경우 표시합니다.
                         var formattedDate = formatDate(year, month, date);
-                        var eventsForDate = allMonthEvents[month].filter(function(event) {
+                        var eventsForDate = events.filter(function(event) {
                             return event.date === formattedDate;
                         });
                         for (var k = 0; k < eventsForDate.length; k++) {
@@ -149,7 +121,9 @@
                         console.log(formattedDate);
                         console.log(eventsForDate);
 
-                        if (year === currentYear && month === currentMonth && date === (new Date().getDate())) {
+                        if (year === currentYear
+                                && month === currentMonth
+                                && date === (new Date().getDate())) {
                             // 오늘 날짜는 강조 표시합니다.
                             cell.style.fontWeight = "bold";
                         }
@@ -170,7 +144,7 @@
             } else {
                 currentMonth--;
             }
-            displayCalendar(currentYear, currentMonth, allMonthEvents);
+            displayCalendar(currentYear, currentMonth, eventsData);
         }
 
         function nextMonth() {
@@ -181,7 +155,7 @@
             } else {
                 currentMonth++;
             }
-            displayCalendar(currentYear, currentMonth, allMonthEvents);
+            displayCalendar(currentYear, currentMonth, eventsData);
         }
     </script>
 </body>

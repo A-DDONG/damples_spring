@@ -41,3 +41,14 @@ INSERT INTO events (date, event_info) VALUES ('2023-07-27', 'Event 1');
 INSERT INTO events (date, event_info) VALUES ('2023-07-28', 'Event 2');
 INSERT INTO events (date, event_info) VALUES ('2023-07-29', 'Event 3');
 SELECT * FROM events;
+
+SELECT COUNT(*) FROM tbl_books WHERE
+b_name LIKE concat('%','부자','%') OR
+b_name LIKE concat('%','행복','%') OR
+b_name LIKE concat('%','부동산','%');
+
+SELECT * FROM tbl_books WHERE
+b_name LIKE concat('%','부자','%') OR
+b_name LIKE concat('%','행복','%') OR
+b_name LIKE concat('%','부동산','%');
+ 

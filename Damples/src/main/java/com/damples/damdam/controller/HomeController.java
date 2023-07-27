@@ -1,6 +1,5 @@
 package com.damples.damdam.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
@@ -9,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.damples.damdam.dao.TourDao;
-import com.damples.damdam.models.ImgDto;
 import com.damples.damdam.models.TourDto;
 
 import lombok.extern.slf4j.Slf4j;

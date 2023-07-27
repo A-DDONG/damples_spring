@@ -37,7 +37,7 @@
 		<%@ include file="/WEB-INF/views/tour/map.jsp"%>
 		<%@ include file="/WEB-INF/views/tour/event.jsp"%>
 		<%@ include file="/WEB-INF/views/tour/main_tourlist.jsp"%>
-
+		<%@ include file="/WEB-INF/views/calendar.jsp"%>
 
 
 	</div>

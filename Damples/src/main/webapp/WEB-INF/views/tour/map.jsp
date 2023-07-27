@@ -12,7 +12,6 @@
 	</div>
 	<img alt="핫플지도" src="${rootPath}/static/images/핫플지도.png">
 </div>
->
 <div class="main map" id="meokbang-map">
 	<img alt="먹방지도" src="${rootPath}/static/images/먹방지도.png">
 </div>

@@ -5,6 +5,5 @@ import java.util.List;
 import com.damples.damdam.models.EventDto;
 
 public interface EventService {
-    List<EventDto> getAllEvents();
-
+	List<EventDto> getEventsForMonth(int year, int month);
 }

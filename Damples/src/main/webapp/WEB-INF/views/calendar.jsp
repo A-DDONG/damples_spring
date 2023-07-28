@@ -33,9 +33,11 @@
     	</tbody>
     
     <tbody id="calendarBody">
-    	
-    </tbody>
+
+ 	</tbody>
+ 	
     </table>
+    
 </div>
 <script>
 	// JS 파일에서 rootPath 정보를 
@@ -46,6 +48,7 @@
 	var allMonthEvents = JSON.parse(`${allMonthEventsJson}`)
 </script>
 <script src="${rootPath}/static/js/calendar.js"></script>
+
 </body>
 </html>
 

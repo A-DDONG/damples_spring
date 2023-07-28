@@ -34,19 +34,28 @@ references tbl_image (image_code);
 
 CREATE TABLE events (
 	id INT PRIMARY KEY auto_increment,
-
     date DATE NOT NULL,
     event_info VARCHAR(255) NOT NULL
 );
-INSERT INTO events (date, event_info) VALUES ('2023-07-27', 'Event 1');
+INSERT INTO events (date, event_info) VALUES ('2023-04-30', '선재생일');
+INSERT INTO events (date, event_info) VALUES ('2023-06-03', '선재');
+INSERT INTO events (date, event_info) VALUES ('2023-07-04', '안돼');
+INSERT INTO events (date, event_info) VALUES ('2023-07-05', '안바꿔줘');
+INSERT INTO events (date, event_info) VALUES ('2023-07-06', '돌아가');
+INSERT INTO events (date, event_info) VALUES ('2023-07-27', '이벤트');
+INSERT INTO events (date, event_info) VALUES ('2023-07-27', '두번째');
+INSERT INTO events (date, event_info) VALUES ('2023-07-27', '세번째');
+INSERT INTO events (date, event_info) VALUES ('2023-07-27', '네번째');
 INSERT INTO events (date, event_info) VALUES ('2023-07-28', 'Event 2');
+INSERT INTO events (date, event_info) VALUES ('2023-07-28', 'ENTJ 는 건방져도 돼');
 INSERT INTO events (date, event_info) VALUES ('2023-07-29', 'Event 3');
 INSERT INTO events (date, event_info) VALUES ('2023-08-02', '힘내');
 INSERT INTO events (date, event_info) VALUES ('2023-08-04', '진정해');
 INSERT INTO events (date, event_info) VALUES ('2023-08-15', '화내면안돼');
 INSERT INTO events (date, event_info) VALUES ('2023-06-15', '강유은짱');
+INSERT INTO events (date, event_info) VALUES ('2023-11-28', '유은탄신일');
 SELECT * FROM events;
-
+TRUNCATE TABLE events;
 
 SELECT COUNT(*) FROM tbl_books WHERE
 b_name LIKE concat('%','부자','%') OR

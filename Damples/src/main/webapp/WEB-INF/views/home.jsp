@@ -24,6 +24,7 @@
 </script>
 <script src="${rootPath}/static/js/main_nav.js"></script>
 <script src="${rootPath}/static/js/main_map.js"></script>
+<script src="${rootPath}/static/js/scroll.js"></script>
 </head>
 
 <body>
@@ -37,7 +38,7 @@
 		<%@ include file="/WEB-INF/views/tour/map.jsp"%>
 		<%@ include file="/WEB-INF/views/tour/event.jsp"%>
 		<%@ include file="/WEB-INF/views/tour/main_tourlist.jsp"%>
-		<%@ include file="/WEB-INF/views/calendar.jsp"%>
+		<button class="scroll">위로이동</button>
 
 
 	</div>

@@ -34,6 +34,7 @@ references tbl_image (image_code);
 
 CREATE TABLE events (
 	id INT PRIMARY KEY auto_increment,
+
     date DATE NOT NULL,
     event_info VARCHAR(255) NOT NULL
 );
@@ -43,6 +44,7 @@ INSERT INTO events (date, event_info) VALUES ('2023-07-29', 'Event 3');
 INSERT INTO events (date, event_info) VALUES ('2023-08-02', '힘내');
 INSERT INTO events (date, event_info) VALUES ('2023-08-04', '진정해');
 INSERT INTO events (date, event_info) VALUES ('2023-08-15', '화내면안돼');
+INSERT INTO events (date, event_info) VALUES ('2023-06-15', '강유은짱');
 SELECT * FROM events;
 
 

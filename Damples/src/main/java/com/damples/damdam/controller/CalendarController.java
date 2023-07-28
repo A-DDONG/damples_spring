@@ -37,6 +37,7 @@ public class CalendarController {
         Calendar currentCalendar = Calendar.getInstance();
         int currentYear = currentCalendar.get(Calendar.YEAR);
         int currentMonth = currentCalendar.get(Calendar.MONTH);
+        
 
         // 요청으로 전달받은 연도와 월이 없는 경우, 현재 날짜를 사용합니다.
         if (year == null || month == null) {

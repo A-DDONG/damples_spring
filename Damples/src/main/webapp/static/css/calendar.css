@@ -1,0 +1,42 @@
+@charset "UTF-8";
+#calendarContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* 고정된 셀 크기를 설정합니다. */
+td {
+  height: 60px; /* 원하는 크기로 조정하세요. */
+  width: 14.28%; /* (100 / 7)로 7일간의 일정한 크기로 설정합니다. */
+  vertical-align: top;
+}
+
+.date {
+  font-weight: bold;
+}
+
+.event {
+  color: blue;
+}
+
+.calendarhead tr th:nth-of-type(1),
+#calendarBody tr td:nth-of-type(1) {
+  color: red;
+}

@@ -1,0 +1,109 @@
+/* 문서 인코딩 설정 */
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 캘린더 컨테이너 스타일 */
+#calendarContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* 테이블 스타일 */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* 테이블 헤더와 셀 스타일 */
+th,
+td {
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* 각 셀의 크기를 설정합니다. */
+tr {
+  max-height: 60px;
+  white-space: nowrap; /* 줄 바꿈 방지 */
+  overflow: hidden; /* 넘침 처리 숨김 */
+}
+
+td {
+  height: 120px; /* 원하는 크기로 조정하세요. */
+  width: 14.28%; /* (100 / 7)로 7일간의 일정한 크기로 설정합니다. */
+  vertical-align: top;
+  max-width: 90px; /* 셀의 최대 너비를 설정합니다. */
+  overflow: hidden;
+  text-overflow: ellipsis; /* 생략 부호로 표시 */
+  white-space: nowrap; /* 줄 바꿈 방지 */
+}
+
+/* 셀 내부 div 요소 스타일 */
+td > div {
+  max-width: 90px; /* 셀의 최대 너비를 설정합니다. */
+  height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis; /* 생략 부호로 표시 */
+  white-space: nowrap; /* 줄 바꿈 방지 */
+}
+
+/* 캘린더 바디 행 스타일 */
+#calendarBody tr {
+  height: 40px;
+}
+
+/* 날짜 스타일 */
+.date {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  margin-bottom: 10px;
+  border: none;
+}
+
+/* 이벤트 스타일 */
+.event {
+  color: blue;
+}
+
+/* 일요일 날짜 스타일 */
+.calendarhead tr th:nth-of-type(1),
+#calendarBody tr td:nth-of-type(1) {
+  color: red;
+}
+td .cell-content {
+  max-height: 75px; /* 세로 영역의 최대 높이를 설정 */
+  overflow: hidden;
+  text-align: left;
+}
+
+td .cell-content div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 25px;
+}
+
+.today .date {
+  border: 1px solid #ccc;
+  border-radius: 50%; /* 원 모양을 만들기 위해 border-radius를 50%로 설정 */
+  width: 30px; /* 원의 지름을 조정할 수 있습니다 */
+  height: 30px; /* 원의 지름을 조정할 수 있습니다 */
+  line-height: 30px; /* 원의 지름과 동일한 값으로 line-height 설정 */
+  background-color: red; /* 빨간색 원으로 설정 */
+  color: white; /* 텍스트 색상을 흰색으로 설정 */
+  display: flex;
+  justify-content: center;
+}
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.damples.damdam.dao.PostDao">
+
+	<select id="selectAll" resultType="com.damples.damdam.models.PostDto">
+	    SELECT seq, nickname, password, category, title, content, 
+	           file_path AS filePath, created_at AS createdAt, views 
+	    FROM posts 
+	    ORDER BY seq DESC
+	</select>
+	
+    <insert id="insert" parameterType="com.damples.damdam.models.PostDto">
+        INSERT INTO posts (nickname, password, category, title, content, file_path, created_at, views)
+        VALUES (#{nickname}, #{password}, #{category}, #{title}, #{content}, #{filePath}, #{createdAt}, #{views})
+    </insert>
+
+	<select id="selectBySeq" parameterType="int" resultType="com.damples.damdam.models.PostDto">
+	    SELECT seq, nickname, password, category, title, content, 
+	           file_path AS filePath, created_at AS createdAt, views 
+	    FROM posts 
+	    WHERE seq = #{seq}
+	</select>
+
+    <update id="increaseViews" parameterType="int">
+        UPDATE posts SET views = views + 1 WHERE seq = #{seq}
+    </update>
+</mapper>

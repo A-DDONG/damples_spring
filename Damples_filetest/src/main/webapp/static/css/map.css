@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+/* 기본적으로 숨겨진 지도 항목 */
+.main.map {
+  display: none;
+}
+
+/* active 클래스가 추가되면 보이도록 변경 */
+.main.map.active {
+  display: block;
+}
+/* 기본적으로 숨겨진 핫플과 먹방 항목들 */
+.tour-category .tourlist.sub {
+  display: none;
+}
+
+/* active 클래스가 추가된 핫플과 먹방 항목들은 보이도록 변경 */
+.tour-category.active .tourlist.sub {
+  display: block;
+}
+
+/* 지도와 마커를 담을 컨테이너 */
+.map-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* 마커스타일 */
+.place-marker {
+  position: absolute;
+  width: 24px; /* 크기를 24px로 변경 */
+  height: 24px; /* 크기를 24px로 변경 */
+  background-color: yellow; /* 배경색을 노란색으로 변경 */
+  border-radius: 50%;
+  cursor: pointer; /* 마우스 커서가 손가락 모양으로 변경 */
+}
+.info-box {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: none;
+  z-index: 9999;
+}

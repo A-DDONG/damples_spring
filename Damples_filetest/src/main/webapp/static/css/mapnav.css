@@ -1,0 +1,33 @@
+@charset "UTF-8";
+.map.nav {
+  display: inline-flex;
+}
+.map.nav ul {
+  display: inherit;
+  flex-direction: column;
+  /* padding: 3rem; */
+}
+.map.nav ul li {
+  border: 2px solid #0c5c00;
+  display: inline-block;
+  font-size: 25px;
+  width: 130px;
+  text-align: center;
+  /* border-radius: 10px; */
+  color: #666;
+  height: 55px;
+  line-height: 55px;
+  font-weight: bold;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  margin-bottom: 10px;
+}
+.map.nav ul li:hover {
+  background-color: #0c5c00;
+  color: white;
+  cursor: pointer;
+}
+.map.nav ul li.active {
+  background-color: #0c5c00;
+  color: white;
+}

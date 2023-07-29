@@ -38,8 +38,10 @@
 		<%@ include file="/WEB-INF/views/tour/map.jsp"%>
 		<%@ include file="/WEB-INF/views/tour/event.jsp"%>
 		<%@ include file="/WEB-INF/views/tour/main_tourlist.jsp"%>
-		<button class="scroll">위로이동</button>
-
+		<div class="scroll">
+		<img class ="img" src="${rootPath}/static/images/화살표.png" width="50px"/>
+		<button class="scroll button">TOP!</button>
+		</div>
 
 	</div>
 	

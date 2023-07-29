@@ -1,5 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // var currentYear = `${currentYear}`;
+// var currentYear = `${currentYear}`;
   // var currentMonth = `${currentMonth}`;
 
   // var allMonthEvents = `${allMonthEventsJson}`; // JSON 문자열을 JavaScript 객체로 변환
@@ -92,40 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
           // 셀에 하나의 div로 이벤트 추가
           cell.appendChild(eventDiv);
-
-          // 툴팁을 표시하기 위한 div를 생성합니다.
-          var tooltipDiv = document.createElement("div");
-          tooltipDiv.classList.add("tooltip");
-          tooltipDiv.textContent = eventsForDate
-            .map(function (event) {
-              return event.event_info;
-            })
-            .join(", ");
-          cell.appendChild(tooltipDiv);
-
-          var dateCells = document.querySelectorAll("td");
-          dateCells.forEach(function (cell) {
-            var dateDiv = cell.querySelector(".date");
-            var tooltip = cell.querySelector(".tooltip");
-
-            dateDiv.addEventListener("mouseenter", function () {
-              tooltip.style.display = "block";
-            });
-
-            dateDiv.addEventListener("mouseleave", function () {
-              tooltip.style.display = "none";
-            });
-
-            dateDiv.addEventListener("click", function () {
-              var searchText = tooltip.textContent;
-              var encodedSearchText = encodeURIComponent(searchText);
-              var searchUrl =
-                "https://search.naver.com/search.naver?query=" +
-                encodedSearchText;
-              window.open(searchUrl, "_blank");
-            });
-          });
-
+          
           if (
             year === currentYear &&
             month === new Date().getMonth() &&
@@ -167,4 +133,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     displayCalendar(currentYear, currentMonth, allMonthEvents);
   }
-});

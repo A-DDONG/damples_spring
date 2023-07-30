@@ -68,8 +68,6 @@
 
 <body>
 	<header>
-		<p>담양 HOT PLACE!</p>
-		<h1>DAMPLES</h1>
 		<%@ include file="/WEB-INF/views/tour/nav.jsp"%>
 	</header>
 	<div class="container">

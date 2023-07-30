@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE html>
+<p>담양 HOT PLACE!</p>
+<h1>DAMPLES</h1>
 <nav class="main">
 	<ul class="main tab">
 		<li class="info">소개
@@ -31,5 +32,4 @@
 	<div class="search box">
 		<input type="text" placeholder="검색어를 입력해주세요" />
 	</div>
-
 </nav>

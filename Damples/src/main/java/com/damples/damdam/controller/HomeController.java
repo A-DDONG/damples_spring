@@ -55,26 +55,37 @@ public class HomeController {
 	    List<TourDto> meokbangList = new ArrayList<>();
 	    List<TourDto> accList = new ArrayList<>();
 	    
+	    
 	    for (TourDto tour : tourList) {
 	        switch (tour.getMain_category()) {
-	        case "hotplace":
-	            hotplaceList.add(tour);
-	            break;
-	        case "meokbang":
-	            meokbangList.add(tour);
-	            break;
-	        case "acc":
-	            accList.add(tour);
-	            break;
-	        default:
-	            // Do something for unexpected categories or ignore
-	            break;
+	            case "hotplace":
+	                // 좌표값이 NULL인 경우 해당 마커를 건너뜁니다.
+	                if (tour.getTour_x_coord() == 0 && tour.getTour_y_coord() == 0) {
+	                    continue;
+	                }
+	                hotplaceList.add(tour);
+	                break;
+	            case "meokbang":
+	                if (tour.getTour_x_coord() == 0 && tour.getTour_y_coord() == 0) {
+	                    continue;
+	                }
+	                meokbangList.add(tour);
+	                break;
+	            case "acc":
+	                if (tour.getTour_x_coord() == 0 && tour.getTour_y_coord() == 0) {
+	                    continue;
+	                }
+	                accList.add(tour);
+	                break;
+	            default:
+	                break;
 	        }
 	    }
-
 	    model.addAttribute("HOTPLACE_LIST", hotplaceList);
 	    model.addAttribute("MEOKBANG_LIST", meokbangList);
 	    model.addAttribute("ACC_LIST", accList);
+	    
+	    log.debug("핫플 리스트 {} : ",hotplaceList);
 	    
 	    // 현재 월의 이벤트 리스트를 모델에 추가합니다.
 	    model.addAttribute("EVENT_LIST", upcomingEvents);

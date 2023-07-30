@@ -27,5 +27,7 @@ public class TourDto {
 	private String tour_fee;	//	VARCHAR(200)
 	private String tour_info;	//	VARCHAR(300)
 	private String tour_imgcode;	//	VARCHAR(5)
+    private int tour_x_coord;	//int
+    private int tour_y_coord;	// int
 
 }

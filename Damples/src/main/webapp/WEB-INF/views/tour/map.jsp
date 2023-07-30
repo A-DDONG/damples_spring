@@ -22,6 +22,6 @@
 	<!-- 정보박스 내용이 동적으로 추가될 것입니다. -->
 </div>
 <!-- 지도 영역 -->
-<div id="map" style="width: 500px; height: 500px;"></div>
+<!-- <div id="map" style="width: 500px; height: 500px;"></div> -->
 
 

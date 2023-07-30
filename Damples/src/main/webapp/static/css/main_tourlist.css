@@ -1,11 +1,14 @@
 @charset "UTF-8";
+
 div.tour-category {
     width: 100%;
     display: none;
 }
+
 div.tour-category.active {
     display: block;
 }
+
 div.tourlist {
     font-family: "GangwonEduPowerExtraBoldA";
     font-size: 30px;
@@ -20,10 +23,12 @@ div.line {
     background-color: #0c5c00;
 }
 
-div.tourlist p.check, div.tourlist p.sub_name {
+div.tourlist p.check,
+div.tourlist p.sub_name {
     display: inline;
     font-size: 40px;
 }
+
 div.tourlist p.check {
     font-weight: bold;
     color: #0c5c00;
@@ -31,7 +36,7 @@ div.tourlist p.check {
 
 div.tourlist.sub p.sub_name {
     font-family: "GangwonEduPowerExtraBoldA";
-    color:#888;
+    color: #888;
 }
 
 .tourlist {
@@ -40,28 +45,61 @@ div.tourlist.sub p.sub_name {
 }
 
 .tour-box {
-    width: 33.33%; /* 화면에 3개의 박스가 보이도록 폭을 33.33%로 설정 */
+    width: 33.33%;
+    /* 화면에 3개의 박스가 보이도록 폭을 33.33%로 설정 */
     padding: 10px;
     list-style-type: none;
     box-sizing: border-box;
+    font-family: "LINESeedKR-Bd";
+
 }
 
 .tour-box li {
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 2px solid #0c5c00;
+    border-radius: 15px;
     padding: 10px;
+    height: 420px;
 }
 
 .tour-box img {
-    width: 100%; /* 이미지를 가로 폭의 100%로 조정 */
-    height: auto; /* 세로 크기를 자동으로 조정하여 비율 유지 */
+    width: 100%;
+    /* 이미지를 가로 폭의 100%로 조정 */
+    height: 240px;
+    /* 세로 크기를 자동으로 조정하여 비율 유지 */
 }
 
 .tour-box .title {
     font-weight: bold;
+    font-size: 25px;
     margin-top: 10px;
 }
 
 .tour-box .sub {
     margin-top: 5px;
+    font-size: 16px;
+    color: #666;
+}
+
+.swiper-container {
+    position: relative;
+    overflow: hidden;
+    /* 화면 범위를 벗어나는 슬라이드를 숨깁니다 */
+}
+
+.swiper-button-next, .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    border-radius: 50%;
+    padding: 10px;
+    z-index: 10;
+    cursor: pointer;
+    color: #0C5C00 !important;
+}
+.swiper-button-next {
+    right: 10px !important;
+}
+
+.swiper-button-prev {
+    left: 10px !important;
 }

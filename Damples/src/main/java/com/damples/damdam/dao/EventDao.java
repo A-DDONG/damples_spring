@@ -9,7 +9,10 @@ import com.damples.damdam.models.EventDto;
 
 public interface EventDao {
 	
+	@Select( "SELECT * FROM events ")
+	public List<EventDto> selectAll();
+	
     @Select("SELECT * FROM events WHERE date >= #{startDate} AND date <= #{endDate}")
-    List<EventDto> getEventsBetweenDates(@Param("startDate") String startDate, @Param("endDate") String endDate);
+    public List<EventDto> getEventsBetweenDates(@Param("startDate") String startDate, @Param("endDate") String endDate);
 
 }

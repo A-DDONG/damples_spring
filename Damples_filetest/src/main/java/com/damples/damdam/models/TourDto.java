@@ -15,6 +15,8 @@ public class TourDto {
 	
 	private String tour_code;	//	VARCHAR(5)
 	private String tour_category;	//	VARCHAR(20)
+	private String sub_category; // VARCHAR(20)
+	private String main_category; // VARCHAR(25)
 	private String tour_name;	//	VARCHAR(50)
 	private String tour_addr;	//	VARCHAR(125)
 	private String tour_time;	//	VARCHAR(200)
@@ -25,6 +27,5 @@ public class TourDto {
 	private String tour_fee;	//	VARCHAR(200)
 	private String tour_info;	//	VARCHAR(300)
 	private String tour_imgcode;	//	VARCHAR(5)
-
-
 }
+

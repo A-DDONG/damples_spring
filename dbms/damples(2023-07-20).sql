@@ -4,6 +4,8 @@ USE tourDB;
 CREATE TABLE tbl_tour (
 	tour_code VARCHAR(5) PRIMARY KEY,
     tour_category VARCHAR(20),
+    sub_category VARCHAR(20),
+    main_category VARCHAR(25),
     tour_name VARCHAR(50),
     tour_addr VARCHAR(125),
     tour_time VARCHAR(200),
@@ -16,7 +18,10 @@ CREATE TABLE tbl_tour (
     tour_imgcode VARCHAR(5)
 );
 
-SELECT * FROM tbl_tour;
+DROP TABLE tbl_tour;
+
+SELECT * FROM tbl_tour;		
+SELECT * FROM tbl_tour WHERE main_category='hotplace' ORDER BY sub_category, tour_code;
 SELECT * FROM tbl_tour WHERE tour_code = 'A0001';
 show databases;
 
@@ -57,6 +62,18 @@ INSERT INTO events (date, event_info) VALUES ('2023-11-28', '유은탄신일');
 SELECT * FROM events;
 TRUNCATE TABLE events;
 
+CREATE TABLE posts (
+    seq INT AUTO_INCREMENT PRIMARY KEY,
+    nickname VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    category VARCHAR(255) NOT NULL,
+    title VARCHAR(255) NOT NULL,
+    content TEXT NOT NULL,
+    file_path VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    views INT DEFAULT 0
+);
+SELECT * FROM posts;
 SELECT COUNT(*) FROM tbl_books WHERE
 b_name LIKE concat('%','부자','%') OR
 b_name LIKE concat('%','행복','%') OR

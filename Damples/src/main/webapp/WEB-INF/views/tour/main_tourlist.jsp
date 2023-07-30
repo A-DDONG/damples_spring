@@ -7,117 +7,97 @@
 		<h1>Hot Place</h1>
 		<div class="line"></div>
 	</div>
-	<div class="tourlist sub">
-		<p class="check">✓</p>
-		<p class="sub_name">유적지</p>
-	</div>
-	<div class="tourlist tourinfo">
-		<c:forEach items="${TOUR_LIST}" var="tour">
-			<c:choose>
-				<c:when test="${tour.tour_code == 'H0006'}">
-					<ul class="tour-box">
-						<li><img src="your_image1.jpg" alt="Image 1">
-							<p class="title">${tour.tour_name}</p>
-							<p class="sub">${tour.tour_info}</p> <!-- 다른 필요한 정보들을 출력 --></li>
-					</ul>
-				</c:when>
-				<c:when test="${tour.tour_code == 'H0005'}">
-					<ul class="tour-box">
-						<li><img src="your_image2.jpg" alt="Image 2">
-							<p class="title">${tour.tour_name}</p>
-							<p class="sub">${tour.tour_info}</p> <!-- 다른 필요한 정보들을 출력 --></li>
-					</ul>
-				</c:when>
-				<c:otherwise>
-					<!-- 해당하는 조건이 없을 경우 아무 작업도 하지 않음 -->
-				</c:otherwise>
-			</c:choose>
-		</c:forEach>
-	</div>
-
-	<div class="tourlist sub">
-		<p class="check">✓</p>
-		<p class="sub_name">자연생활</p>
-	</div>
-	<div class="tourlist tourinfo">
-		<c:forEach items="${TOUR_LIST}" var="tour">
-			<c:choose>
-				<c:when test="${tour.tour_code == 'H0003'}">
-					<ul class="tour-box">
-						<li><img src="your_image1.jpg" alt="Image 1">
-							<p class="title">${tour.tour_name}</p>
-							<p class="sub">${tour.tour_info}</p> <!-- 다른 필요한 정보들을 출력 --></li>
-					</ul>
-				</c:when>
-				<c:when test="${tour.tour_code == 'H0004'}">
-					<ul class="tour-box">
-						<li><img src="your_image2.jpg" alt="Image 2">
-							<p class="title">${tour.tour_name}</p>
-							<p class="sub">${tour.tour_info}</p> <!-- 다른 필요한 정보들을 출력 --></li>
-					</ul>
-				</c:when>
-				<c:when test="${tour.tour_code == 'H0007'}">
-					<ul class="tour-box">
-						<li><img src="your_image1.jpg" alt="Image 1">
-							<p class="title">${tour.tour_name}</p>
-							<p class="sub">${tour.tour_info}</p> <!-- 다른 필요한 정보들을 출력 --></li>
-					</ul>
-				</c:when>
-				<c:when test="${tour.tour_code == 'H0008'}">
-					<ul class="tour-box">
-						<li><img src="your_image2.jpg" alt="Image 2">
-							<p class="title">${tour.tour_name}</p>
-							<p class="sub">${tour.tour_info}</p> <!-- 다른 필요한 정보들을 출력 --></li>
-					</ul>
-				</c:when>
-				<c:otherwise>
-					<!-- 해당하는 조건이 없을 경우 아무 작업도 하지 않음 -->
-				</c:otherwise>
-			</c:choose>
-		</c:forEach>
-	</div>
-	<div class="tourlist sub">
-		<p class="check">✓</p>
-		<p class="sub_name">산책</p>
-	</div>
-	<div class="tourlist sub">
-		<p class="check">✓</p>
-		<p class="sub_name">체험</p>
-	</div>
+	<c:set var="prevSubCategory" value="" />
+	<c:forEach var="tour" items="${HOTPLACE_LIST}">
+		<c:if test="${!prevSubCategory.equals(tour.sub_category)}">
+			<div class="tourlist sub">
+				<p class="check">✓</p>
+				<p class="sub_name">${tour.sub_category}</p>
+			</div>
+			<div class="tourlist tourinfo swiper-container">
+				<div class="swiper-wrapper">
+					<c:forEach var="tour2" items="${HOTPLACE_LIST}">
+						<c:if test="${tour2.sub_category == tour.sub_category}">
+							<div class="tour-box swiper-slide">
+								<ul>
+									<li><img src="${rootPath}/static/images/테스트.png" alt="Image 1">
+										<p class="title">${tour2.tour_name}</p>
+										<p class="sub">${tour2.tour_info}</p> <!-- Show other necessary information --></li>
+								</ul>
+							</div>
+						</c:if>
+					</c:forEach>
+				</div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
+		</c:if>
+		<c:set var="prevSubCategory" value="${tour.sub_category}" />
+	</c:forEach>
 </div>
 <div class="tour-category" id="meokbang" data-category="meokbang">
 	<div class="tourlist hp">
-		<h1>MeokBang</h1>
+		<h1>먹방</h1>
 		<div class="line"></div>
 	</div>
-	<div class="tourlist sub">
-		<p class="check">✓</p>
-		<p class="sub_name">맛집</p>
-	</div>
-	<div class="tourlist sub">
-		<p class="check">✓</p>
-		<p class="sub_name">카페</p>
-	</div>
+	<c:set var="prevSubCategory" value="" />
+	<c:forEach var="tour" items="${MEOKBANG_LIST}">
+		<c:if test="${!prevSubCategory.equals(tour.sub_category)}">
+			<div class="tourlist sub">
+				<p class="check">✓</p>
+				<p class="sub_name">${tour.sub_category}</p>
+			</div>
+			<div class="tourlist tourinfo swiper-container">
+				<div class="swiper-wrapper">
+					<c:forEach var="tour2" items="${MEOKBANG_LIST}">
+						<c:if test="${tour2.sub_category == tour.sub_category}">
+							<div class="tour-box swiper-slide">
+								<ul>
+									<li><img src="${rootPath}/static/images/테스트.png" alt="Image 1">
+										<p class="title">${tour2.tour_name}</p>
+										<p class="sub">${tour2.tour_info}</p> <!-- Show other necessary information --></li>
+								</ul>
+							</div>
+						</c:if>
+					</c:forEach>
+				</div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
+		</c:if>
+		<c:set var="prevSubCategory" value="${tour.sub_category}" />
+	</c:forEach>
 </div>
 <div class="tour-category" id="acc" data-category="acc">
 	<div class="tourlist hp">
-		<h1>숙박</h1>
+		<h1>acc</h1>
 		<div class="line"></div>
 	</div>
-	<div class="tourlist sub">
-		<p class="check">✓</p>
-		<p class="sub_name">캠핑</p>
-	</div>
-	<div class="tourlist sub">
-		<p class="check">✓</p>
-		<p class="sub_name">호텔</p>
-	</div>
-	<div class="tourlist sub">
-		<p class="check">✓</p>
-		<p class="sub_name">펜션</p>
-	</div>
-	<div class="tourlist sub">
-		<p class="check">✓</p>
-		<p class="sub_name">게스트하우스</p>
-	</div>
+	<c:set var="prevSubCategory" value="" />
+	<c:forEach var="tour" items="${ACC_LIST}">
+		<c:if test="${!prevSubCategory.equals(tour.sub_category)}">
+			<div class="tourlist sub">
+				<p class="check">✓</p>
+				<p class="sub_name">${tour.sub_category}</p>
+			</div>
+			<div class="tourlist tourinfo swiper-container">
+				<div class="swiper-wrapper">
+					<c:forEach var="tour2" items="${ACC_LIST}">
+						<c:if test="${tour2.sub_category == tour.sub_category}">
+							<div class="tour-box swiper-slide">
+								<ul>
+									<li><img src="${rootPath}/static/images/테스트.png" alt="Image 1">
+										<p class="title">${tour2.tour_name}</p>
+										<p class="sub">${tour2.tour_info}</p> <!-- Show other necessary information --></li>
+								</ul>
+							</div>
+						</c:if>
+					</c:forEach>
+				</div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
+		</c:if>
+		<c:set var="prevSubCategory" value="${tour.sub_category}" />
+	</c:forEach>
 </div>

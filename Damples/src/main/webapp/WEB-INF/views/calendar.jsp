@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">	
     <title>Calendar</title>
     <link rel="stylesheet" href="${rootPath}/static/css/calendar.css">
 </head>

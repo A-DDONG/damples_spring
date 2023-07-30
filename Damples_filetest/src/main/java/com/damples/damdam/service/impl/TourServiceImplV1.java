@@ -1,5 +1,7 @@
 package com.damples.damdam.service.impl;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.damples.damdam.dao.TourDao;
@@ -20,4 +22,19 @@ public class TourServiceImplV1 implements TourService {
 		return tourDao.selectById(tourCode);
 	}
 
+    @Override
+    public List<String> getMainCategoryCodes() {
+        return tourDao.selectDistinctMainCategoryCodes();
+    }
+
+    @Override
+    public List<String> getSubCategoryCodesByMainCategory(String main_category) {
+        return tourDao.selectDistinctSubCategoryCodesByMainCategory(main_category);
+
+    }
+    
+	@Override
+	public List<TourDto> getToursBySubCategoryCode(String sub_category_code) {
+		return tourDao.getToursBySubCategoryCode(sub_category_code);
+	}
 }

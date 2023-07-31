@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+div.calcon {
+  display: block;
+}
+
 /* 캘린더 컨테이너 스타일 */
 #calendarContainer {
   max-width: 1000px;
@@ -106,4 +110,3 @@ td .cell-content div {
   display: flex;
   justify-content: center;
 }
-

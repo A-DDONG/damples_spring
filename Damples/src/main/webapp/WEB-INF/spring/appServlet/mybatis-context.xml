@@ -39,8 +39,6 @@
 	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="mySQL_DS" />
 	</bean>
-	
-
 
 </beans>
 

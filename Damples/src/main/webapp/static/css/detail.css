@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+.course-tab {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.course-tab li {
+  padding: 0 10px;
+  font-size: 40px;
+  font-family: "SBAggroB";
+  color: #9c9c9c;
+}
+.course-tab li:hover {
+  cursor: pointer;
+}
+.course-tab li.active {
+  color: #0c5c00; /* 원하는 색상으로 변경 */
+}
+.detail-bigbox {
+  display: flex;
+}
+
+.line {
+  border: 2px solid #0c5c00;
+  margin-bottom: 50px;
+}
+
+.detail-title {
+  font-size: 35px;
+  display: flex;
+  font-family: "LINESeedKR-Bd";
+}
+
+.detail-title p:nth-of-type(2) {
+  color: #0c5c00;
+  font-size: 20px;
+  padding-left: 30px;
+  align-items: end;
+  display: flex;
+  padding-bottom: 5px;
+}
+
+.detail-img {
+  display: flex;
+  flex-direction: column; /* 세로로 나열되도록 설정 */
+  align-items: center; /* 가운데 정렬을 위해 추가 */
+  width: 560px;
+}
+
+.detail-img img {
+  width: 560px;
+  height: 368px; /* 이미지의 세로 비율에 맞게 높이를 자동으로 설정 */
+  margin-bottom: 10px; /* 이미지 사이의 간격을 조절합니다 */
+}
+
+.detail-box {
+  margin-left: 50px;
+  font-size: 20px;
+  font-family: "LINESeedKR-Bd";
+}
+
+.detail-box li {
+  margin-bottom: 10px;
+}
+
+.detail-box span {
+  color: #0c5c00;
+}
+
+.detail-box p {
+  padding-left: 35px;
+}
+.swiper-container {
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+  /* width: 100%; */
+}
+
+.swiper-slide {
+  font-size: 18px;
+
+  /* Center slide text vertically */
+  display: flex;
+  align-items: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  border-radius: 50%;
+  padding: 10px;
+  z-index: 10;
+  cursor: pointer;
+  color: #0c5c00 !important;
+}
+.swiper-button-next {
+  right: 10px !important;
+}
+
+.swiper-button-prev {
+  left: 10px !important;
+}
+
+.spot-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.spot-info {
+  display: flex;
+  width: 45%; /* 혹은 원하는 비율에 맞게 설정 */
+  margin-bottom: 20px; /* 원하는 마진 설정 */
+}
+
+.spot-info img {
+  width: 290px;
+  height: 194px;
+  flex-grow: 1;
+  object-fit: cover; /* 이미지가 부모 요소를 채우도록 설정 */
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}

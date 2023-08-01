@@ -30,7 +30,7 @@
   position: absolute;
   width: 24px; /* 크기를 24px로 변경 */
   height: 24px; /* 크기를 24px로 변경 */
-  background-color: yellow; /* 배경색을 노란색으로 변경 */
+  /* background-color: yellow; 배경색을 노란색으로 변경 */
   border-radius: 50%;
   cursor: pointer; /* 마우스 커서가 손가락 모양으로 변경 */
 }

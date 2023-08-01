@@ -1,0 +1,129 @@
+@charset "UTF-8";
+table {
+  width: 100%;
+  margin: 10px auto;
+  border-collapse: collapse;
+  font-family: "LINESeedKR-Bd";
+}
+table th,
+table td {
+  text-align: left;
+  padding: 0.8rem;
+}
+table td {
+  font-family: "LINESeedKR-Rg";
+  overflow: hidden;
+}
+table tr:nth-of-type(odd) {
+  background-color: #efefef;
+}
+table tr:nth-of-type(even) {
+  background-color: #dfdfdf;
+}
+
+.pagination ul {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination li {
+  padding: 5px;
+}
+
+.write.button {
+  text-align: end;
+  font-family: "LINESeedKR-Bd";
+  font-size: 20px;
+}
+
+.write.button a {
+  padding: 8px;
+  color: white;
+  border-radius: 3px;
+  width: 80px;
+  height: 50px;
+}
+
+.write.button a:nth-of-type(1) {
+  background-color: #ff9d78;
+}
+.write.button a:nth-of-type(2) {
+  background-color: #0c5c00;
+}
+
+form {
+  width: 100%;
+  border: 2px solid #0c5c00;
+  border-radius: 8px;
+  padding: 2rem;
+}
+label {
+  font-size: 20px;
+  font-family: "SBAggroB";
+  color: #0c5c00;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+form select {
+  width: 70px;
+  height: 30px;
+  text-align: center;
+}
+form input {
+  width: 100%;
+}
+form input#title {
+  height: 50px;
+}
+form input#content {
+  height: 300px;
+}
+form input#image {
+  width: 300px;
+}
+form input#id,
+form input#pw {
+  width: 150px;
+  height: 30px;
+}
+input::placeholder {
+  color: gray;
+}
+input#pw::placeholder {
+  color: gray;
+  width: 250px;
+  height: 25px;
+}
+textarea {
+  width: 100%; /* 원하는 너비로 설정 */
+  height: 300px; /* 원하는 높이로 설정 */
+  resize: none; /* 크기 조절 비활성화 */
+  padding: 5px;
+  color: 12px;
+}
+form div {
+  margin-bottom: 20px;
+}
+.btn {
+  text-align: right;
+}
+.btn button {
+  padding: 8px;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  font-family: "LINESeedKR-Bd";
+  width: 80px;
+  height: 50px;
+  font-size: 17px;
+}
+
+.btn button:nth-of-type(1) {
+  background-color: #ff9d78;
+}
+.btn button:nth-of-type(2) {
+  background-color: red;
+}
+.btn button:nth-of-type(3) {
+  background-color: #0c5c00;
+}

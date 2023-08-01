@@ -18,7 +18,7 @@
 	</bean>
 
 	<bean class="java.lang.String" id="macHome">
-		<constructor-arg value="/Users/callor/Documents" />
+		<constructor-arg value="/Users/KMS505225/Documents" />
 	</bean>
 	<bean class="java.lang.String" id="macPath">
 		<constructor-arg value="/workspace/files" />
@@ -28,7 +28,7 @@
 	<mvc:resources mapping="/files/**"
 		location="/files/,
 					file:///c:/app/upload/,
-					file:///Users/callor/Documents/workspace/files/" />
+					file:///Users/KMS505225/Documents/workspace/files/" />
 	<task:annotation-driven />
 
 </beans>

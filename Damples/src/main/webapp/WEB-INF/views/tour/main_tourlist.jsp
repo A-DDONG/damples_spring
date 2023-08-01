@@ -12,7 +12,7 @@
 		<c:if test="${!prevSubCategory.equals(tour.sub_category)}">
 			<div class="tourlist sub">
 				<p class="check">✓</p>
-				<p class="sub_name">${tour.sub_category}</p>
+				<p class="sub_name" >${tour.sub_category}</p>
 			</div>
 			<div class="tourlist tourinfo swiper-container">
 				<div class="swiper-wrapper">
@@ -20,7 +20,9 @@
 						<c:if test="${tour2.sub_category == tour.sub_category}">
 							<div class="tour-box swiper-slide">
 								<ul>
-									<li><img src="${rootPath}/static/images/테스트.png" alt="Image 1">
+									<li
+										onclick="location.href='${rootPath}/detail?tourCode=${tour2.tour_code}'"><img
+										src="${rootPath}/static/images/테스트.png" alt="Image 1">
 										<p class="title">${tour2.tour_name}</p>
 										<p class="sub">${tour2.tour_info}</p> <!-- Show other necessary information --></li>
 								</ul>
@@ -53,9 +55,13 @@
 						<c:if test="${tour2.sub_category == tour.sub_category}">
 							<div class="tour-box swiper-slide">
 								<ul>
-									<li><img src="${rootPath}/static/images/테스트.png" alt="Image 1">
+									<li
+										onclick="location.href='${rootPath}/detail?tourCode=${tour2.tour_code}'">
+										<img src="${rootPath}/static/images/테스트.png" alt="Image 1">
 										<p class="title">${tour2.tour_name}</p>
-										<p class="sub">${tour2.tour_info}</p> <!-- Show other necessary information --></li>
+										<p class="sub">${tour2.tour_info}</p> <!-- Show other necessary information -->
+
+									</li>
 								</ul>
 							</div>
 						</c:if>
@@ -86,9 +92,12 @@
 						<c:if test="${tour2.sub_category == tour.sub_category}">
 							<div class="tour-box swiper-slide">
 								<ul>
-									<li><img src="${rootPath}/static/images/테스트.png" alt="Image 1">
+									<li
+										onclick="location.href='${rootPath}/detail?tourCode=${tour2.tour_code}'">
+										<img src="${rootPath}/static/images/테스트.png" alt="Image 1">
 										<p class="title">${tour2.tour_name}</p>
-										<p class="sub">${tour2.tour_info}</p> <!-- Show other necessary information --></li>
+										<p class="sub">${tour2.tour_info}</p> <!-- Show other necessary information -->
+									</li>
 								</ul>
 							</div>
 						</c:if>

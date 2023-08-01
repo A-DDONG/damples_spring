@@ -11,6 +11,10 @@
 <link rel="stylesheet" href="${rootPath}/static/css/calendar.css">
 <link rel="stylesheet" href="${rootPath}/static/css/main.css">
 <link rel="stylesheet" href="${rootPath}/static/css/nav.css">
+<script>
+   var rootPath = "${rootPath}"
+</script>
+<script src="${rootPath}/static/js/main_nav.js"></script>
 </head>
 <body>
 	<header>
@@ -54,6 +58,7 @@
 		var currentYear = "${year}";
 		var currentMonth = "${month}";
 		var allMonthEvents = JSON.parse(`${allMonthEventsJson}`)
+		
 	</script>
 	<script src="${rootPath}/static/js/calendar.js"></script>
 
